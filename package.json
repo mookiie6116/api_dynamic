@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app",
-    "dev": "nodemon app",
-    "prod": "SET NODE_ENV=production& node app.js"
+    "start": "node server",
+    "dev": "nodemon server",
+    "prod": "SET NODE_ENV=production& node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,11 @@
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "nodemon": "^2.0.2"
+  },
   "dependencies": {
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
@@ -28,7 +33,6 @@
     "moment": "^2.24.0",
     "mongoose": "^5.8.7",
     "mssql": "^5.1.0",
-    "nodemon": "^1.19.1",
     "ssh2-sftp-client": "^4.2.0",
     "uuid": "^3.3.3"
   },
