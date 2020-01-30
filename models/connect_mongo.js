@@ -1,10 +1,8 @@
 import mongoose from "mongoose";
-mongoose.Promise = require("bluebird");
 
-const url = "mongodb://localhost:27017/chat";
-const connect = mongoose.connect(url, {
+const url = `mongodb://admin:secure@128.199.192.85:2277/admin`;
+mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-
-module.exports = connect;
+export let db = mongoose.connection
