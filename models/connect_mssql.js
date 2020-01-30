@@ -1,5 +1,7 @@
-const moment = require('moment');
-const configs = require('config');
+import moment from "moment";
+import config from "config";
+import mssql from "mssql";
+
 let config = configs.get('database');
 // let config = {
 //     "user": "",
@@ -11,8 +13,6 @@ let config = configs.get('database');
 //     }
 //   };
 moment.locale('th');
-
-var mssql = require('mssql')
 module.exports = {
     connect: function () {
         mssql.connect(config, function (err) {

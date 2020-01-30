@@ -1,6 +1,7 @@
-let Client = require('ssh2-sftp-client');
-const configs = require('config');
-const fs = require("fs")
+import Client from "ssh2-sftp-client";
+import configs from "config";
+import fs from "fs";
+
 let sftp = new Client();
 const config = configs.get('ftp');
 // const config ={

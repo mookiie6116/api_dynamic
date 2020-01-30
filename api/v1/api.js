@@ -1,6 +1,7 @@
-const express = require('express');
+import express from "express"
+import moment from "moment";
 const router = express.Router();
-const moment = require('moment');
+
 moment.locale('th');
 
 // router.use("/help", require("./helper"));

@@ -1,13 +1,15 @@
-const express = require("express");
-const path = require('path')
-const cors = require('cors')
-const app = express();
-const bodyParser = require("body-parser");
-const config = require('config');
-let ver = config.get('ver');
+import express from "express";
+import path from "path";
+import cors from "cors";
+import bodyParser from "body-parser";
+import config from "config";
+import https from "http";
 
-const http = require("http").Server(app);
+const app = express();
+let ver = config.get('ver');
 const port = process.env.PORT || config.get('port');
+
+const http = https.Server(app);
 
 app.use(bodyParser.json({limit: '10mb', extended: true}))
 app.use(bodyParser.urlencoded({limit: '10mb', extended: true}))

@@ -1,7 +1,7 @@
-const moment = require('moment');
+import moment from "moment";
+import mysql from "mysql";
 moment.locale('th');
 
-var mysql = require("mysql");
 // connect database
 let config = mysql.createPool(configs.get('database'));
 // var config  = mysql.createPool({
